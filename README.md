@@ -8,10 +8,17 @@ https://archive.ics.uci.edu/dataset/856/higher+education+students+performance+ev
 
 ## Group Members
 Kate Jackson; k1jackson@ucsd.edu
+
 Emily Jin; ejin@ucsd.edu
+
 James Thai; jqthai@ucsd.edu
+
 Shol Hafezi; shafezi@ucsd.edu
-Tyler Lee; tcl00@ucsd.edu
+
+Tyler Lee; tcl002@ucsd.edu
+
 Andrew Cen; acen@ucsd.edu
+
 Ka Wing Yan; w2yan@ucsd.edu
+
 Kim Lim; kdlim@ucsd.edu
