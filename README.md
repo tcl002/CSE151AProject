@@ -24,7 +24,7 @@ Ka Wing Yan; w2yan@ucsd.edu
 Kim Lim; kdlim@ucsd.edu
 
 ## Data Preprocessing
-
+We have decided to preprocess our data by implementing one-hot encoding on the categorical data and then standardizing our numerical data with min-max normalization.
 
 ## Notebook Link
 [https://colab.research.google.com/drive/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO?authuser=3#scrollTo=S5sWIqLq0t-F](https://drive.google.com/file/d/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO/view?usp=sharing)
