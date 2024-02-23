@@ -27,6 +27,9 @@ Ka Wing Yan; w2yan@ucsd.edu
 
 Kim Lim; kdlim@ucsd.edu
 
+## Notebook Link
+[https://colab.research.google.com/drive/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO?authuser=3#scrollTo=S5sWIqLq0t-F](https://drive.google.com/file/d/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO/view?usp=sharing)
+
 ## Data Preprocessing
 
 ### 1. Encode Categorical Variables
@@ -50,9 +53,6 @@ The dataset will be split into training and test sets to evaluate the performanc
 ### 7. Balance the Target Variable
 The distribution of the target variable ('Target') should be checked. If imbalanced, techniques like SMOTE, undersampling, or oversampling can be used to ensure the model does not become biased towards the majority class.
 
-## Notebook Link
-[https://colab.research.google.com/drive/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO?authuser=3#scrollTo=S5sWIqLq0t-F](https://drive.google.com/file/d/1O30J-aRLqy5FdP2zSYkbxSQPZl2MfoAO/view?usp=sharing)
-
 ### How to Set Up Python Environment (Optional)
 
 If you run a project not in Datahub, and you run the project in local machine or other environment and meet some problems, you may need to set up python environment.
@@ -70,3 +70,9 @@ conda create -n cse151a python=3.9.5
 conda activate cse151a
 pip install -r requirements.txt
 ```
+
+## Model Selection
+1. Our first model (for Milestone 4) following our logistic regression model is going to be a deep neural net (DNN). Our reasoning for this is because our target class is categorical with three separate categories to determine between. A neural net would allow us to create a model that outputs predictions for all three categories.
+2. Our second model is going to be a support vector machine (SVM). Our plan for this is to combine the "Enrolled" and "Graduate" categories together so that we can have a categorical class that can be represented in a binary fashion. This way, we can use the SVM and compare it with our original logistic regression model to compare and contrast the models.
+
+## Milestone 3 Conclusion
