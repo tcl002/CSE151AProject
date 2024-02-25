@@ -71,11 +71,19 @@ conda activate cse151a
 pip install -r requirements.txt
 ```
 
-## Model Selection
+## Logistic Regression Model
+
+### Evaluation of Training vs. Testing Error
+Out best logistic regression model achieved an accuracy of 0.89 (precision of 0.90, recall of 0.73, loss of 3.52) on the training data and an accuracy of 0.86 (precision of 0.87, recall of 0.72, loss of 5.07) on the testing data. There is a minimal difference between the model's performance on the training and testing data which indicates that we did not overfit our model (which is also reflected in out validation data). Overall, we think that the logistic regression model performed well but increasing the model complexity (as in a NN) may improve the accuracy. 
+
+### Model Fitting
+First we split out data into numerical, categorical (multiclass), categorical (binary), and one-hot-encoded categorical (multiclass) data. We determined that the model performed best on numerical data (accuracy of 0.85), binary categorical data (accuracy of 0.77), and one-hot-encoded multiclass categoical data (accuracy of 0.755). Next, we fitted our model to the optimal number of features. We found that the optimal number of features was 35 (mostly numerical and binary features) which gave us a validation accuracy of approximately 0.89.
+
+### Model Selection
 1. Our first model (for Milestone 4) following our logistic regression model is going to be a deep neural net (DNN). Our reasoning for this is because our target class is categorical with three separate categories to determine between. A neural net would allow us to create a model that outputs predictions for all three categories.
 2. Our second model is going to be a support vector machine (SVM). Our plan for this is to combine the "Enrolled" and "Graduate" categories together so that we can have a categorical class that can be represented in a binary fashion. This way, we can use the SVM and compare it with our original logistic regression model to compare and contrast the models.
 
-## Milestone 3 Conclusion
+### Milestone 3 Conclusion
 Based on the analysis of our logistic regression model trained on the dataset, it appears to perform reasonably well, achieving satisfactory accuracy and loss metrics on both the training and validation data. The model effectively leverages carefully selected features to make accurate predictions regarding whether students drop out at the end of the semester or continue their enrollment and/or graduate.
 
 However, while the model demonstrates promising performance, there are still opportunities for improvement. One such avenue is the exploration of regularization techniques. Regularization can be beneficial in mitigating the risk of overfitting, particularly in scenarios where there's uncertainty about the relevance of certain features or the presence of noise in the data. By introducing regularization, such as L1 (lasso) or L2 (ridge) regularization, we can encourage the model to learn simpler patterns that generalize better to unseen data, thus potentially enhancing its overall performance and robustness.
