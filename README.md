@@ -96,6 +96,24 @@ However, while the model demonstrates promising performance, there are still opp
 
 ## Model 2: Deep Neural Network
 
+### Evaluation of Training vs. Testing Error
+
+### Model Fitting
+
+### Hyperparameter Tuning, K-Fold Cross Validation, and Feature Expansion
+To refine the performance of our model, we performed hyperparameter tuning using `keras_tuner.RandomSearch.` The key hyperparameters that were tuned include the number of units in each layer (32 to  512, with a step size of 32), the activation function (sigmoid, relu, tanh, and softmax), the optimizer (SGD and RMSprop), and the learning rate (1e-4 to 1e-2). 
+
+Additionally, our model employs a 10-fold cross-validation technique, which produced the following results:
+
+**Average Accuracy:** 0.8747432030125589
+
+**Average Precision:** 0.8708472392296717
+
+**Average Recall:** 0.710911080507756
+
+**Average F1 Score:** 0.7821422849843318
+
+
 ## Model 3: Support Vector Machine
 
 ## Discussion
