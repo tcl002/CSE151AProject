@@ -94,11 +94,6 @@ Based on the analysis of our logistic regression model trained on the dataset, i
 
 However, while the model demonstrates promising performance, there are still opportunities for improvement. One such avenue is the exploration of regularization techniques. Regularization can be beneficial in mitigating the risk of overfitting, particularly in scenarios where there's uncertainty about the relevance of certain features or the presence of noise in the data. By introducing regularization, such as L1 (lasso) or L2 (ridge) regularization, we can encourage the model to learn simpler patterns that generalize better to unseen data, thus potentially enhancing its overall performance and robustness.
 
-### Model Selection
-Our third and final model (for Milestone 5) is still going to be a support vector machine (SVM).
-
-### Milestone 4 Conclusion
-
 ## Model 2: Deep Neural Network
 
 ### Evaluation of Training vs. Testing Error
@@ -118,6 +113,10 @@ Additionally, our model employs a 10-fold cross-validation technique, which prod
 
 **Average F1 Score:** 0.7821422849843318
 
+### Model Selection
+Our third and final model (for Milestone 5) is still going to be a support vector machine (SVM).
+
+### Milestone 4 Conclusion
 
 ## Model 3: Support Vector Machine
 
