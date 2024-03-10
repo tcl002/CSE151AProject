@@ -96,28 +96,29 @@ However, while the model demonstrates promising performance, there are still opp
 
 ## Model 2: Deep Neural Network
 
+### Evalutation of Data, Labels, and Loss Function
+
+In terms of out data, we believe the preprocessing from the previous model is still ideal. We think it is appropriate to one-hot encode categorical variables becuase they should be treated as independent features (as opposed to one label-encoded feature). Additionally, we think some form of scaling is needed for the numerical data, so we decided to use the min-max scaled data which is been squeezed between the range from 0 to 1 to improve out model's performance. We also will continue to use the features which were produced the best result in our previous model because we predict these features have the highest correlation with a student's dropout rate. 
+
+In terms of the loss function, our previous model, logistic regression, uses log loss. In this model we decided to use binary crossentropy loss since we are attempting a binary classification (dropout or not dropout). During hyperparameter tuning we also experimented with using mean-squared error, but we found this loss function to be less effective than binary crossentropy.
+
 ### Evaluation of Training vs. Testing Error
+
+For out best and final neural network, we achieved a training accuracy of 0.88, validation accuracy of 0.87, and a testing accuracy of 0.86 (loss of 0.31, 0.33, and 0.35 respectively). By performing K-fold cross-validation, we were able to ensure that there is a minimal difference between the training, validation, and testing errors which indicates that out model is not overfitting. In comparison to the previous model, the neural network achieved effectively identical training and testing accuracy to out logistic regression model. This indicates that both models are effective at using the selected features to classify students as dropouts or non-dropouts. 
 
 ### Model Fitting
 
 ### Hyperparameter Tuning, K-Fold Cross Validation, and Feature Expansion
-To refine the performance of our model, we performed hyperparameter tuning using `keras_tuner.RandomSearch.` The key hyperparameters that were tuned include the number of units in each layer (32 to  512, with a step size of 32), the activation function (sigmoid, relu, tanh, and softmax), the optimizer (SGD and RMSprop), and the learning rate (1e-4 to 1e-2). 
+To refine the performance of our model, we performed hyperparameter tuning using `keras_tuner.RandomSearch.` The key hyperparameters that were tuned include the number of units in each layer (32 to  512, with a step size of 32), the activation function (sigmoid, relu, tanh, and softmax), the optimizer (SGD and RMSprop), and the learning rate (1e-4 to 1e-2). We found that the most effective model parameters were 224 units in each hidden layer using tanh activation functions. We also found that an SGD optimizer with a learning rate of approximately 0.002 and binary crossentropy loss was most effective. This model achieved a training accuracy of 0.96, a validation accuracy of 0.83, and a testing accuracy of 0.84.
 
-Additionally, our model employs a 10-fold cross-validation technique, which produced the following results:
-
-**Average Accuracy:** 0.8747432030125589
-
-**Average Precision:** 0.8708472392296717
-
-**Average Recall:** 0.710911080507756
-
-**Average F1 Score:** 0.7821422849843318
+However because the large discrepency between the high training accuracy and the low validation / testing accuracy, we decided that our model was not generalizable enough and was most likely overfitting the data. Therefore, we employed a 10-fold cross-validation technique, which produced our best model. This model has a training accuracy of 0.88, validation accuracy of 0.87, and a testing accuracy of 0.86 (loss of 0.31, 0.33, and 0.35 respectively).
 
 ### Model Selection
-Our third and final model (for Milestone 5) is still going to be a support vector machine (SVM).
+Our third and final model (for Milestone 5) is still going to be a support vector machine (SVM). We believe an SVM will do a good jop at splitting the data into two classes (dropout and non-dropout) and we would like to experiment with different kernal functions to see if we can achieve a higher accuracy.
 
 ### Milestone 4 Conclusion
 In the project, we developed two predictive models: a logistic regression model and a deep neural network, and the purpose is predict student dropout rates. The logistic regression model, our first approach, provided a baseline with notable strengths in interpretability and speed.The second model, a deep neural network, represented a more advanced approach, leveraging a sequential architecture with multiple dense layers. This model showed a marked improvement, particularly in handling non-linear patterns, with validation and test accuracy scores improving to 87% and 86%, respectively. This suggests that the deep neural network could capture complex interactions between student features more effectively than logistic regression.To further enhance the neural network model, we could experiment with additional layers, different activation functions, or more sophisticated regularization techniques to combat overfitting, as indicated by the gap between training and validation performance. Incorporating dropout layers or exploring different optimization algorithms could also yield performance gains. Comparatively, the deep neural network performed better than the logistic regression model in terms of handling complex data structures, as evidenced by higher accuracy and more nuanced pattern recognition in the dropout predictions. However, the logistic regression model maintained its value through ease of use and interpretation, crucial for stakeholders understanding contributing factors to student dropout.
+
 ## Model 3: Support Vector Machine
 
 ## Discussion
