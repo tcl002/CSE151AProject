@@ -53,6 +53,14 @@ pip install -r requirements.txt
 ## Methods
 
 ### Data Exploration
+To prepare for the predictive modeling process, we conducted data exploration as a preliminary step to better understand the dataset's characteristics. 
+
+* **Number of Instances:** The dataset contains 4424 instances, or students, which is indicative of a robust sample size.
+* **Number of Features:** The dataset contains 36 features that encompass a range of information types from binary values to complex numerical scores.
+
+As a part of our data exploration, we performed correlation analysis to identify any strong relationships between features, and the results of this analysis can be visualized in the heatmap below: 
+
+![Heatmap](https://github.com/tcl002/CSE151AProject/blob/4756c21176c69aaf3b9651e4701874c2f99e08b6/graphs/Data%20Visualization/heatmap.png)
 
 ### Data Preprocessing
 
