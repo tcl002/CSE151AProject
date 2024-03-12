@@ -126,6 +126,25 @@ In the project, we developed two predictive models: a logistic regression model 
 
 ## Model 3: Support Vector Machine
 
+### Evaluation of Training vs Testing Error
+
+After hyperparameter tuning, our best SVM achieved an accuracy of 0.86, a precision of 0.87, and a recall of 0.70. Our training data achieved a slightly higher accuracy of 0.9, as well as a higher precision and recall of 0.92 and 0.73 respectively. Since our metrics for our testing data is quite similar to our training data (just slightly under across all fronts), our SVM did not underfit to the data nor did it overfit. Our SVM performed quite well in predicting the labels of dropped-out and enrolled/graduate and generalized well to unseen data.
+
+### Model Fitting
+
+Similar to how we performed model fitting in our logistic regression model, we looked at the accuracy and loss for our training and validation data across a different number of features. As seen in the fitting graph, we concluded that our model improved dramatically in these aspects as we increased the number of features from 0-50. Our SVM's performance flatlined after that, however, and increasing the number of features used beyond 50 did not have a significant effect. This model resulted in the metrics listed above in our evaluation of the training and testing error.
+
+### Hyperparameter Tuning
+
+In order to optimize our model and maximize its performance in terms of accuracy and loss, we performed hyperparameter tuning using ```sklearn.model_selection.GridSearch```. The result of our hyperparameter tuning was C=100 (the highest regularization parameter we tested), kernel = polynomial, and degree = 1. This combination of parameters suggests that our SVM favored simplicity in the model over complexity. As our regularization parameter was the biggest we tested, complexity was punished in our model, and our SVM prevented overfitting to the training data and captured the overall pattern of the data well.
+
+This is seen when we compared the training and testing errors. The model's performance on the testing data was very close to the training data, with only a slight dip in accuracy between the two. At an accuracy of 0.86, our model's performance held up well when it came to unseen data.
+
+### Milestone 5 Conclusion
+For our last model, we developed an SVM. Compared to the first model, our SVM performed extremely similarly and followed the same trends in terms of the number of features and the corresponding accuracies and losses to our logistic regression model. Our SVM performed similarly to our second model as well, which was our neural network. Our SVM was different compared to our neural network in the way that it was a lot simpler - with our optimal parameters punishing complexity in favor of more simple models (C = 100 as our regularization parameter, degree = 1 for our polynomial kernel).
+
+Overall, our SVM performed comparatively well when it came to our accuracy and loss metrics for both our logistic regression model and our neural network. Our SVM is a simple classification model compared to our neural network, which utilizes different layers, activation functions, and other methods to predict our class target (dropped out vs enrolled/graduated).
+
 ## Discussion
 
 ## Conclusion
