@@ -236,8 +236,6 @@ Finally, as we conclude this project, it's important to recognize that predictiv
 ##### Kim
 During my involvement in the project, I made significant contributions to both the code implementation and the write-up. My contributions can be summarized as follows:
 
-Code Implementation:
-
 Developed parts of the data preprocessing tasks, such as the displaying of the correlation heatmap and selection of features.
 Implemented parts of the machine learning models, including logistic regression, deep neural networks, and support vector machines, using TensorFlow, Scikit-learn, and Keras libraries. My contribution is heavily in the DNN however.
 
