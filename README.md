@@ -237,8 +237,8 @@ Finally, as we conclude this project, it's important to recognize that predictiv
 During my involvement in the project, I made significant contributions to both the code implementation and the write-up. My contributions can be summarized as follows:
 
 Developed parts of the data preprocessing tasks, such as the displaying of the correlation heatmap and selection of features.
-Implemented parts of the machine learning models, including logistic regression, deep neural networks, and support vector machines, using TensorFlow, Scikit-learn, and Keras libraries. My contribution is heavily in the DNN however.
+Implemented parts of the machine learning models, including logistic regression, deep neural networks, and support vector machines. My contribution is heavily in the DNN however.
 
-Authored sections of the write-up covering data preprocessing techniques, model development, evaluation, and conclusions.
+Authored sections of the write-up covering a part of the introduction, milestone 3 conclusion, some parts in the result, discussion and conclusion.
 Provided critical analysis and interpretation of model performance metrics, discussing the strengths, weaknesses, and opportunities for improvement.
 Collaborated with team members to synthesize findings and propose future directions for research and development.
