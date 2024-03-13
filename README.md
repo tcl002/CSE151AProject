@@ -168,8 +168,10 @@ The logistic regression model achieved an accuracy of 0.89, precision of 0.90, r
 | Macro avg| 0.86      | 0.83   | 0.84     | 885     |
 | Weighted avg | 0.86  | 0.86   | 0.86     | 885     |
 
+#### Comparison graph for training and validation loss and accuracy based on number of features
 ![loss_graph_logistic_regression](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Num%20of%20Features.png)
 
+#### Comparison graph for training and validation loss and accuracy based on feature type
 ![features_graph_logistic_graph](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Types%20of%20Features.png)
 
 _Model 2: Deep Neural Network (DNN)_
