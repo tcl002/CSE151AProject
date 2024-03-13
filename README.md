@@ -173,13 +173,31 @@ The logistic regression model achieved an accuracy of 0.89, precision of 0.90, r
 ![features_graph_logistic_graph](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Types%20of%20Features.png)
 
 _Model 2: Deep Neural Network (DNN)_
-The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.86, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.  
+The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.86, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.
+#### Testing Metrics Report
+|          | Precision | Recall | F1-score | Support |
+|----------|-----------|--------|----------|---------|
+| 0.0      | 0.84      | 0.90   | 0.87     | 569     |
+| 1.0      | 0.80      | 0.69   | 0.74     | 316     |
+| Accuracy |           |        |          | 0.83    |
+| Macro avg| 0.82      | 0.80   | 0.80     | 885     |
+| Weighted avg | 0.82   | 0.83   | 0.82     | 885     |
+
 ![overfitting_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/trainvaildloss.png)
 
 ![second_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/avgloss.png)
 
 _Model 3: Support Vector Machine (SVM)_
 The SVM model achieved an accuracy of 0.86, a precision of 0.87, and a recall of 0.70 for the testing data, and achieved an accuracy of 0.9, a precision of 0.92, and a recall of 0.73 for the training data. 
+#### Testing Metrics Report
+|          | Precision | Recall | F1-score | Support |
+|----------|-----------|--------|----------|---------|
+| 0.0      | 0.89      | 0.97   | 0.93     | 2179    |
+| 1.0      | 0.91      | 0.75   | 0.82     | 1006    |
+| Accuracy |           |        |          | 0.90    |
+| Macro avg| 0.90      | 0.86   | 0.87     | 3185    |
+| Weighted avg | 0.90   | 0.90   | 0.89     | 3185    |
+
 ![svm_graph](https://github.com/tcl002/CSE151AProject/blob/1ebaa31fb0235fecea731e2267baae88c268d211/graphs/svm/lossandacc.png)
 
 Overall, all three models performed comparably well in predicting students' dropout rates and academic success, with each model having distinct strengths that allowed us to comprehensively analyze the dataset. 
