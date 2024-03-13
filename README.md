@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this study, we will leverage the dataset titled, “Predict students dropout and academic” from UC Irvine’s Machine Learning Repository, uploaded on December 12th, 2021. Our objective is to employ supervised learning, specifically utilizing a logistic regression model, a deep neural network, and a support vector machine, to predict the dropout rates of students in higher education. The dataset has 36 potential features, which cover historical information such as age, gender, nationality, etc. Our approach involves training a model to predict the target variable (ie. dropout) based on these student profiles.
+In this study, we will leverage the dataset titled, “Predict Students' Dropout and Academic Success” from UC Irvine’s Machine Learning Repository, uploaded on December 12th, 2021. Our objective is to employ supervised learning, specifically utilizing a logistic regression model, a deep neural network, and a support vector machine, to predict the dropout rates of students in higher education. The dataset has 36 potential features, which cover historical information such as age, gender, nationality, etc. Our approach involves training a model to predict the target variable (ie. dropout) based on these student profiles.
 
 We chose this dataset because as college students we are interested in being able to predict other students' trajectories in higher education. Specifically, we are interested in predicting whether a student will graduate based on their profile information. We find it cool to consider what variables have predictive power in determining whether a student will succeed in academics. Knowing whether grades, family background, financial background, or other factors affect a student's chance of graduating would allow us to reflect on our circumstances and those of our peers. Additionally, this model is important because it could be utilized by higher education institutions to predict which students are likely to drop out and possibly intervene beforehand to get them the support they need to graduate. This is especially important given that national college dropout rates are at 40% and on the rise (![source](https://research.com/universities-colleges/college-dropout-rates#2)). Our model could potentially become a source of information that allows universities to focus their resources on those who need them most.
 
@@ -144,7 +144,7 @@ Similar to how we performed model fitting in our logistic regression model, we l
 
 ### Hyperparameter Tuning
 
-In order to optimize our model and maximize its performance in terms of accuracy and loss, we performed hyperparameter tuning using ```sklearn.model_selection.GridSearch```. The result of our hyperparameter tuning was C=100 (the highest regularization parameter we tested), kernel = polynomial, and degree = 1. This combination of parameters suggests that our SVM favored simplicity in the model over complexity. As our regularization parameter was the biggest we tested, complexity was punished in our model, and our SVM prevented overfitting to the training data and captured the overall pattern of the data well.
+To optimize our model and maximize its performance in terms of accuracy and loss, we performed hyperparameter tuning using ```sklearn.model_selection.GridSearch```. The result of our hyperparameter tuning was C=100 (the highest regularization parameter we tested), kernel = polynomial, and degree = 1. This combination of parameters suggests that our SVM favored simplicity in the model over complexity. As our regularization parameter was the biggest we tested, complexity was punished in our model, and our SVM prevented overfitting to the training data and captured the overall pattern of the data well.
 
 This is seen when we compared the training and testing errors. The model's performance on the testing data was very close to the training data, with only a slight dip in accuracy between the two. At an accuracy of 0.86, our model's performance held up well when it came to unseen data.
 
@@ -156,10 +156,10 @@ Overall, our SVM performed comparatively well when it came to our accuracy and l
 ## Results
 Our project aimed to predict students' dropout and academic success based on a dataset from UC Irvine's Machine Learning Repository. After preprocessing the dataset, we applied three predictive models to predict our target variable, including **logistic regression**, a **deep neural network (DNN)**, and a **support vector machine (SVM)**.
 
-_Model 1: Logistic Regression_
-
+### Model 1: Logistic Regression
 The logistic regression model achieved an accuracy of 0.89, precision of 0.89, recall of 0.85, and loss of 3.52 on the training data. On the testing data, our model achieved an accuracy of 0.86, precision of 0.86, recall of 0.83, and loss of 5.07. The minimal difference between the training and testing data suggests an absence of overfitting for our model. 
-#### Testing Metrics Report
+
+#### Testing Data Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
 | 0.0      | 0.86      | 0.94   | 0.90     | 569     |
@@ -168,17 +168,23 @@ The logistic regression model achieved an accuracy of 0.89, precision of 0.89, r
 | Macro avg| 0.86      | 0.83   | 0.84     | 885     |
 | Weighted avg | 0.86  | 0.86   | 0.86     | 885     |
 
-#### Model Fitting Graph
-Comparison graph for training and validation loss and accuracy based on number of features
+We also analyzed the impact of the number of features and the data type on model performance.
+
+#### Model Fitting Graph (Fig. 1)
+Impact of Number of Features on Model Performance
 ![loss_graph_logistic_regression](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Num%20of%20Features.png)
 
-#### Model Fitting Graph
-Comparison graph for training and validation loss and accuracy based on feature type
+As illustrated in the graphs above, both loss and accuracy plateaued beyond a certain threshold. The loss for both the training and validation datasets dramatically decreased as the number of features increased to approximately 50 features. Correspondingly, accuracy improved significantly for both the training and validation datasets as the number of features increased to approximately 50. Beyond that threshold, additional features would not contribute significantly to the model's performance.
+
+#### Model Fitting Graph (Fig. 2)
+Impact of Data Type on Model Performance
 ![features_graph_logistic_graph](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Types%20of%20Features.png)
 
+Additionally, the graphs above compare the model's performance across different data types, including numerical, categorical, binary, and one-hot encoded categorical (multi-class). It appears that the model performs best on numerical data, as it achieves the lowest loss and highest accuracy, followed then by binary, one-hot categorical, and categorical data, respectively.
 
-_Model 2: Deep Neural Network (DNN)_
+### Model 2: Deep Neural Network (DNN)
 The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.85, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.
+
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
@@ -188,17 +194,21 @@ The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87,
 | Macro avg| 0.86      | 0.81   | 0.83     | 885     |
 | Weighted avg | 0.85  | 0.85   | 0.84     | 885     |
 
+When constructing our DNN model, we experimented with both hyperparameter tuning and K-fold cross-validation.
 
-#### Model Fitting Graph 
-Using hyperparameters only
+#### Model Fitting Graph - (Hyperparameter Tuning)
 ![overfitting_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/trainvaildloss.png)
 
-#### Model Fitting Graph 
-Using K-fold and hyperparameters    
+In the graph above, there is a clear divergence between the training and validation loss after hyperparameter tuning which is indicative of overfitting. 
+
+#### Model Fitting Graph - (Hyperparameter Tuning + K-Fold Cross Validation)   
 ![second_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/avgloss.png)
 
-_Model 3: Support Vector Machine (SVM)_
-The SVM model achieved an accuracy of 0.86, a precision of 0.85, and a recall of 0.83 for the testing data, and achieved an accuracy of 0.9, a precision of 0.90, and a recall of 0.86 for the training data. 
+To address the possibility of an overfitted model, we introduced K-fold cross-validation alongside hyperparameter tuning, in which we see a similar trend between the training and validation loss, which is indicative of a well-generalized model. 
+
+### Model 3: Support Vector Machine (SVM)
+The SVM model achieved an accuracy of 0.86, a precision of 0.85, and a recall of 0.83 for the testing data, and achieved an accuracy of 0.9, a precision of 0.90, and a recall of 0.86 for the training data. Optimal performance was achieved with C=100, a polynomial kernel, and a degree of 1.
+
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
@@ -220,16 +230,18 @@ _Data Preprocessing:_ We utilized OneHotEncoding for categorical variables and M
 
 _Model Development:_ Our choice of models—logistic regression, deep neural network (DNN), and support vector machine (SVM)—was driven by the nature of our target variable and the complexity of the data. Logistic regression provided a baseline, offering interpretability and speed. However, its simplicity limited its ability to capture complex patterns in the data. The DNN, on the other hand, demonstrated superior performance in handling non-linear relationships but required more computational resources and hyperparameter tuning. The SVM presented a balance between simplicity and performance, although its interpretability was not as straightforward as logistic regression.
 
+Throughout our development, we faced challenges such as determining the balance between model complexity and performance. For example, our DNN's initial overfitting prompted the discussion of the importance of validation techniques, whereas our logistic regression and SVM models highlighted the value of simplicity and feature selection.
+
 _Evaluation and Interpretation:_ Throughout our analysis, we continuously evaluated our models' performance on both training and testing data to ensure generalizability. We observed minimal differences between training and testing errors for all models, indicating that overfitting was effectively mitigated. This instilled confidence in the reliability of our results and the generalizability of our models.
 
-_Believability of Results:_ While our models achieved promising results, each of them has its assumptions and constraints, which may not fully capture the complexity of real-world scenarios. Additionally, our analysis is based on a specific dataset, and the generalizability of our findings to other contexts should be approached with caution. Furthermore, the dynamic nature of data and the possibility of unforeseen variables emphasize the importance of ongoing refinement and validation of our models.
+_Believability of Results:_ While our models achieved promising results, each of them has its assumptions and constraints, which may not fully capture the complexity of real-world scenarios. Additionally, our analysis is based on a specific dataset, and the generalizability of our findings to other contexts should be approached with caution. Furthermore, the dynamic nature of data and the possibility of unforeseen variables emphasize the importance of ongoing refinement and validation of our models, as student populations vary and as the educational landscape continues to evolve.
 
 ## Conclusion
 Our analysis revealed the importance of data preprocessing in enhancing model performance. Each step, such as encoding categorical variables and handling missing data,  played a critical role in ensuring the quality and integrity of our predictions. Furthermore, our exploration of different modeling techniques—logistic regression, deep neural networks, and support vector machines—provided valuable insights into the complexity of the problem and the trade-offs between interpretability and performance.
 
 Moving forward, there are several avenues that we can explore and refine. One area of focus is the incorporation of advanced regularization techniques, such as dropout layers in neural networks or kernel methods in support vector machines, to combat overfitting and improve model generalizability. Additionally, the exploration of ensemble methods, such as random forests or gradient boosting, could leverage the strengths of multiple models to enhance predictive accuracy and robustness.
 
-Finally, as we conclude this project, it's important to recognize that predictive modeling is an iterative process, where each iteration builds upon the lessons learned from previous attempts. While our models provide valuable insights, they represent just one snapshot in time, and there's always room for refinement and enhancement. What we strive for is to gain a more accurate and robust predictive models so that we can provide information in educational settings that can prompt actionable intervention.
+Finally, as we conclude this project, it's important to recognize that predictive modeling is an iterative process, where each iteration builds upon the lessons learned from previous attempts. While our models provide valuable insights, they represent just one snapshot in time, and there's always room for refinement and enhancement. What we strive for is to gain a more accurate and robust predictive model so that we can provide information in educational settings that can prompt actionable intervention.
 
 ## Collaboration
 
