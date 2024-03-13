@@ -164,24 +164,24 @@ The logistic regression model achieved an accuracy of 0.89, precision of 0.90, r
 |----------|-----------|--------|----------|---------|
 | 0.0      | 0.86      | 0.94   | 0.90     | 569     |
 | 1.0      | 0.87      | 0.72   | 0.79     | 316     |
-| Accuracy |           |        |          | 0.86    |
+| Accuracy |           |        | 0.86     | 885     |
 | Macro avg| 0.86      | 0.83   | 0.84     | 885     |
-| Weighted avg | 0.86   | 0.86   | 0.86     | 885     |
+| Weighted avg | 0.86  | 0.86   | 0.86     | 885     |
 
 ![loss_graph_logistic_regression](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Num%20of%20Features.png)
 
 ![features_graph_logistic_graph](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Types%20of%20Features.png)
 
 _Model 2: Deep Neural Network (DNN)_
-The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.86, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.
+The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.85, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
-| 0.0      | 0.84      | 0.90   | 0.87     | 569     |
-| 1.0      | 0.80      | 0.69   | 0.74     | 316     |
-| Accuracy |           |        |          | 0.83    |
-| Macro avg| 0.82      | 0.80   | 0.80     | 885     |
-| Weighted avg | 0.82   | 0.83   | 0.82     | 885     |
+| 0.0      | 0.84      | 0.95   | 0.89     | 569     |
+| 1.0      | 0.88      | 0.67   | 0.76     | 316     |
+| Accuracy |           |        | 0.85     | 885     |
+| Macro avg| 0.86      | 0.81   | 0.83     | 885     |
+| Weighted avg | 0.85  | 0.85   | 0.84     | 885     |
 
 ![overfitting_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/trainvaildloss.png)
 
@@ -192,11 +192,11 @@ The SVM model achieved an accuracy of 0.86, a precision of 0.87, and a recall of
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
-| 0.0      | 0.89      | 0.97   | 0.93     | 2179    |
-| 1.0      | 0.91      | 0.75   | 0.82     | 1006    |
-| Accuracy |           |        |          | 0.90    |
-| Macro avg| 0.90      | 0.86   | 0.87     | 3185    |
-| Weighted avg | 0.90   | 0.90   | 0.89     | 3185    |
+| 0.0      | 0.86      | 0.93   | 0.89     | 569     |
+| 1.0      | 0.85      | 0.72   | 0.78     | 316     |
+| Accuracy |           |        | 0.86     | 885     |
+| Macro avg| 0.85      | 0.83   | 0.84     | 885     |
+| Weighted avg | 0.85   | 0.86   | 0.85    | 885     |
 
 ![svm_graph](https://github.com/tcl002/CSE151AProject/blob/1ebaa31fb0235fecea731e2267baae88c268d211/graphs/svm/lossandacc.png)
 
