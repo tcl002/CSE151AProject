@@ -190,11 +190,11 @@ The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87,
 
 
 #### Model Fitting Graph 
-using hyperparameters only
+Using hyperparameters only
 ![overfitting_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/trainvaildloss.png)
 
 #### Model Fitting Graph 
-using K-fold and hyperparameters
+Using K-fold and hyperparameters    
 ![second_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/avgloss.png)
 
 _Model 3: Support Vector Machine (SVM)_
