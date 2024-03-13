@@ -168,11 +168,14 @@ The logistic regression model achieved an accuracy of 0.89, precision of 0.90, r
 | Macro avg| 0.86      | 0.83   | 0.84     | 885     |
 | Weighted avg | 0.86  | 0.86   | 0.86     | 885     |
 
-#### Comparison graph for training and validation loss and accuracy based on number of features
+#### Model Fitting Graph
+Comparison graph for training and validation loss and accuracy based on number of features
 ![loss_graph_logistic_regression](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Num%20of%20Features.png)
 
-#### Comparison graph for training and validation loss and accuracy based on feature type
+#### Model Fitting Graph
+Comparison graph for training and validation loss and accuracy based on feature type
 ![features_graph_logistic_graph](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Logistic%20Regression/LossAcc%20-%20Types%20of%20Features.png)
+
 
 _Model 2: Deep Neural Network (DNN)_
 The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87, and testing accuracy of 0.85, with the loss being 0.31, 0.33, and 0.35, respectively. K-fold cross-validation helped ensure the model's generalizability by minimizing the difference between the training, validation, and testing errors.
@@ -185,8 +188,13 @@ The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87,
 | Macro avg| 0.86      | 0.81   | 0.83     | 885     |
 | Weighted avg | 0.85  | 0.85   | 0.84     | 885     |
 
+
+#### Model Fitting Graph 
+using hyperparameters only
 ![overfitting_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/trainvaildloss.png)
 
+#### Model Fitting Graph 
+using K-fold and hyperparameters
 ![second_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/avgloss.png)
 
 _Model 3: Support Vector Machine (SVM)_
@@ -200,6 +208,7 @@ The SVM model achieved an accuracy of 0.86, a precision of 0.87, and a recall of
 | Macro avg| 0.85      | 0.83   | 0.84     | 885     |
 | Weighted avg | 0.85   | 0.86   | 0.85    | 885     |
 
+#### Model Fitting Graph
 ![svm_graph](https://github.com/tcl002/CSE151AProject/blob/1ebaa31fb0235fecea731e2267baae88c268d211/graphs/svm/lossandacc.png)
 
 Overall, all three models performed comparably well in predicting students' dropout rates and academic success, with each model having distinct strengths that allowed us to comprehensively analyze the dataset. 
