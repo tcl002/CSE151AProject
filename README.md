@@ -165,7 +165,7 @@ The DNN model reported a training accuracy of 0.88, validation accuracy of 0.87,
 
 _Model 3: Support Vector Machine (SVM)_
 The SVM model achieved an accuracy of 0.86, a precision of 0.87, and a recall of 0.70 for the testing data, and achieved an accuracy of 0.9, a precision of 0.92, and a recall of 0.73 for the training data. 
-![svm_graph]https://github.com/tcl002/CSE151AProject/blob/1ebaa31fb0235fecea731e2267baae88c268d211/graphs/svm/lossandacc.png
+![svm_graph](https://github.com/tcl002/CSE151AProject/blob/1ebaa31fb0235fecea731e2267baae88c268d211/graphs/svm/lossandacc.png)
 
 Overall, all three models performed comparably well in predicting students' dropout rates and academic success, with each model having distinct strengths that allowed us to comprehensively analyze the dataset. 
 
