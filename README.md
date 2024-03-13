@@ -158,7 +158,7 @@ Our project aimed to predict students' dropout and academic success based on a d
 
 _Model 1: Logistic Regression_
 
-The logistic regression model achieved an accuracy of 0.89, precision of 0.90, recall of 0.73, and loss of 3.52 on the training data. On the testing data, our model achieved an accuracy of 0.86, precision of 0.87, recall of 0.72, and loss of 5.07. The minimal difference between the training and testing data suggests an absence of overfitting for our model. 
+The logistic regression model achieved an accuracy of 0.89, precision of 0.89, recall of 0.85, and loss of 3.52 on the training data. On the testing data, our model achieved an accuracy of 0.86, precision of 0.86, recall of 0.83, and loss of 5.07. The minimal difference between the training and testing data suggests an absence of overfitting for our model. 
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
@@ -198,7 +198,7 @@ Using K-fold and hyperparameters
 ![second_neural_net](https://github.com/tcl002/CSE151AProject/blob/98ee683fd2b81cc18b313a54794dec4d9ef4246d/graphs/Neural%20Net/avgloss.png)
 
 _Model 3: Support Vector Machine (SVM)_
-The SVM model achieved an accuracy of 0.86, a precision of 0.87, and a recall of 0.70 for the testing data, and achieved an accuracy of 0.9, a precision of 0.92, and a recall of 0.73 for the training data. 
+The SVM model achieved an accuracy of 0.86, a precision of 0.85, and a recall of 0.83 for the testing data, and achieved an accuracy of 0.9, a precision of 0.90, and a recall of 0.86 for the training data. 
 #### Testing Metrics Report
 |          | Precision | Recall | F1-score | Support |
 |----------|-----------|--------|----------|---------|
