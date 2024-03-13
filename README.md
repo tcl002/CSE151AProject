@@ -232,3 +232,15 @@ Moving forward, there are several avenues that we can explore and refine. One ar
 Finally, as we conclude this project, it's important to recognize that predictive modeling is an iterative process, where each iteration builds upon the lessons learned from previous attempts. While our models provide valuable insights, they represent just one snapshot in time, and there's always room for refinement and enhancement. What we strive for is to gain a more accurate and robust predictive models so that we can provide information in educational settings that can prompt actionable intervention.
 
 ## Collaboration
+
+##### Kim
+During my involvement in the project, I made significant contributions to both the code implementation and the write-up. My contributions can be summarized as follows:
+
+Code Implementation:
+
+Developed parts of the data preprocessing tasks, such as the displaying of the correlation heatmap and selection of features.
+Implemented parts of the machine learning models, including logistic regression, deep neural networks, and support vector machines, using TensorFlow, Scikit-learn, and Keras libraries. My contribution is heavily in the DNN however.
+
+Authored sections of the write-up covering data preprocessing techniques, model development, evaluation, and conclusions.
+Provided critical analysis and interpretation of model performance metrics, discussing the strengths, weaknesses, and opportunities for improvement.
+Collaborated with team members to synthesize findings and propose future directions for research and development.
