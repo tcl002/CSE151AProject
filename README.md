@@ -310,3 +310,6 @@ Implemented parts of the machine learning models, including logistic regression,
 Authored sections of the write-up covering a part of the introduction, milestone 3 conclusion, some parts in the result, discussion and conclusion.
 Provided critical analysis and interpretation of model performance metrics, discussing the strengths, weaknesses, and opportunities for improvement.
 Collaborated with team members to synthesize findings and propose future directions for research and development.
+
+##### Tyler
+I attended each weekly meeting to communicate with the team about what was still required and how to separate tasks for the upcoming milestone. I contributed to parts of the writeup, including but not limited to the following sections: abstract, model selection, model performance analysis, etc. I also contributed to the code, including but not limited to the following sections: data visualization, data preprocessing, neural net, support vector machine, etc.
