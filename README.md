@@ -88,10 +88,31 @@ The distribution of the target variable ('Target') should be checked. If imbalan
 ## Model 1: Logistic Regression Model
 
 ### Evaluation of Training vs. Testing Error
+## Logistic Regression Model Performance
+
+| Data Type | Accuracy | Precision | Recall | Loss  |
+|-----------|----------|-----------|--------|-------|
+| Training  | 0.89     | 0.90      | 0.73   | 3.52  |
+| Testing   | 0.86     | 0.87      | 0.72   | 5.07  |
+
 Out best logistic regression model achieved an accuracy of 0.89 (precision of 0.90, recall of 0.73, loss of 3.52) on the training data and an accuracy of 0.86 (precision of 0.87, recall of 0.72, loss of 5.07) on the testing data. There is a minimal difference between the model's performance on the training and testing data which indicates that we did not overfit our model (which is also reflected in our validation data). Overall, we think that the logistic regression model performed well but increasing the model complexity (as in a NN) may improve the accuracy. 
 
+
+
 ### Model Fitting
-First we split out data into numerical, categorical (multiclass), categorical (binary), and one-hot-encoded categorical (multiclass) data. We determined that the model performed best on numerical data (accuracy of 0.85), binary categorical data (accuracy of 0.77), and one-hot-encoded multiclass categorical data (accuracy of 0.755). Next, we fitted our model to the optimal number of features. We found that the optimal number of features was 35 (mostly numerical and binary features) which gave us a validation accuracy of approximately 0.89.
+We categorized our dataset into four types: numerical, categorical (multiclass), categorical (binary), and one-hot-encoded categorical (multiclass). Here's how the logistic regression model performed across different data types:
+
+| Data Type                                 | Accuracy |
+|-------------------------------------------|----------|
+| Numerical                                 | 0.85     |
+| Categorical (Binary)                      | 0.77     |
+| One-Hot-Encoded Categorical (Multiclass)  | 0.755    |
+
+Following the initial performance analysis, we optimized the feature set. By selecting the optimal combination and number of features, we discovered:
+
+| Optimal Number of Features | Feature Types Included       | Validation Accuracy |
+|----------------------------|------------------------------|---------------------|
+| 35                         | Mostly Numerical & Binary    | 0.89                |
 
 ### Model Selection
 1. Our first model (for Milestone 4) following our logistic regression model is going to be a deep neural net (DNN). Our reasoning for this is because our target class is categorical with three separate categories to determine between. A neural net would allow us to create a model that outputs predictions for all three categories.
@@ -112,7 +133,18 @@ In terms of the loss function, our previous model, logistic regression, uses log
 
 ### Evaluation of Training vs. Testing Error
 
-For our best and final neural network, we achieved a training accuracy of 0.88, a validation accuracy of 0.87, and a testing accuracy of 0.86 (loss of 0.31, 0.33, and 0.35 respectively). By performing K-fold cross-validation, we were able to ensure that there is a minimal difference between the training, validation, and testing errors which indicates that our model is not overfitting. In comparison to the previous model, the neural network achieved effectively identical training and testing accuracy to our logistic regression model. This indicates that both models are effective at using the selected features to classify students as dropouts or non-dropouts. 
+In our final neural network model evaluation, we have noted the following accuracies and loss values:
+
+| Data Type    | Accuracy | Loss |
+|--------------|----------|------|
+| Training     | 0.88     | 0.31 |
+| Validation   | 0.87     | 0.33 |
+| Testing      | 0.86     | 0.35 |
+
+Through K-fold cross-validation, we confirmed minimal discrepancy between training, validation, and testing errors, which implies that our model maintains its generality without overfitting.
+
+### Model Comparison
+When compared to our earlier logistic regression model, the neural network exhibits virtually identical performance in terms of training and testing accuracy. This suggests that both models are equally efficient at leveraging the selected features to predict student outcomes (dropouts or non-dropouts).
 
 ### Model Fitting
 
@@ -122,9 +154,33 @@ For our final model, we again evaluated the model fitting by plotting the traini
 
 ### Hyperparameter Tuning, K-Fold Cross Validation, and Feature Expansion
 
-To refine the performance of our model, we performed hyperparameter tuning using `keras_tuner.RandomSearch.` The key hyperparameters that were tuned include the number of units in each layer (32 to  512, with a step size of 32), the activation function (sigmoid, relu, tanh, and softmax), the optimizer (SGD and RMSprop), and the learning rate (1e-4 to 1e-2). We found that the most effective model parameters were 224 units in each hidden layer using tanh activation functions. We also found that an SGD optimizer with a learning rate of approximately 0.002 and binary cross-entropy loss was most effective. This model achieved a training accuracy of 0.96, a validation accuracy of 0.83, and a testing accuracy of 0.84.
+#### Hyperparameter Tuning
+We refined our neural network model's performance using `keras_tuner.RandomSearch`. The tuning focused on several key hyperparameters:
+- Number of units in each layer: Ranged from 32 to 512, with a step size of 32
+- Activation function: Included options were sigmoid, relu, tanh, and softmax
+- Optimizer: SGD and RMSprop
+- Learning rate: From 1e-4 to 1e-2
 
-However, because of the large discrepancy between the high training accuracy and the low validation/testing accuracy, we decided that our model was not generalizable enough and was most likely overfitting the data. Therefore, we employed a 10-fold cross-validation technique, which produced our best model. This model has a training accuracy of 0.88, a validation accuracy of 0.87, and a testing accuracy of 0.86 (loss of 0.31, 0.33, and 0.35 respectively).
+The optimal configuration was found to be:
+- 224 units in each hidden layer
+- tanh activation functions
+- SGD optimizer
+- Learning rate of approximately 0.002
+- Loss function: Binary cross-entropy
+
+This configuration yielded a training accuracy of 0.96, a validation accuracy of 0.83, and a testing accuracy of 0.84.
+
+#### Identifying Overfitting
+Despite high training accuracy, the significant gap with validation/testing accuracies suggested overfitting. To address this, we utilized:
+
+#### K-Fold Cross Validation
+We employed a 10-fold cross-validation method, leading to a more generalizable model. This best model demonstrated:
+- Training accuracy: 0.88
+- Validation accuracy: 0.87
+- Testing accuracy: 0.86
+- Loss: 0.31 (Training), 0.33 (Validation), 0.35 (Testing)
+
+This approach helped us mitigate overfitting while maintaining strong model performance across all data sets.
 
 ### Model Selection
 Our third and final model (for Milestone 5) is still going to be a support vector machine (SVM). We believe an SVM will do a good job at splitting the data into two classes (dropout and non-dropout) and we would like to experiment with different kernel functions to see if we can achieve a higher accuracy.
