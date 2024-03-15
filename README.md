@@ -19,7 +19,7 @@ Emily Jin; ejin@ucsd.edu
 
 James Thai; jqthai@ucsd.edu
 
-Shol Hafezi; shafezi@ucsd.edu
+Sholehani Hafezi; shafezi@ucsd.edu
 
 Tyler Lee; tcl002@ucsd.edu
 
@@ -328,3 +328,7 @@ I attended weekly group meetings to discuss the progress of our project, and wha
 
 ##### Ka Wing Yan,Terry
 In the project beginning, I helped to write the abstract and discuss which dataset to choose And attend weekly meeting. Next, Start Coding about the data exploration and data processing (loading data, diagram building, missing data checking, listing the top 10 in relation to the target, and plotting out the graph). Build up early vision LogisticRegression and RandomForestClassifier for testing dataset. Set up a local environment write a script in requirements.txt and let the code run in a local machine and how to install conda.  Discuss how to build up the logistic regression, deep neural network, and SVM(Support Vector Machine).Write a milestone 4 conclusion comparing the differences between the two models And discuss what is the next model.
+
+
+#### Sholehani
+I attended our weekly group meetings to help discuss project logistics and role management for upcoming assignments. Initially, I helped select the dataset features and discussed potential target features. For the project, I focused primarily on post model evaluation and performance for Model 2 and 3. More specifically, I compared performance across models and their influence on changes for the next model. I reviewed the model's labels, data, and loss function changes based on their accuracy, loss score, and overall fitting graphs. The remaining work I did included proof read documentation and adjusting data values within the analysis write ups.
