@@ -313,3 +313,6 @@ Collaborated with team members to synthesize findings and propose future directi
 
 ##### Tyler
 I attended each weekly meeting to communicate with the team about what was still required and how to separate tasks for the upcoming milestone. I contributed to parts of the writeup, including but not limited to the following sections: abstract, model selection, model performance analysis, etc. I also contributed to the code, including but not limited to the following sections: data visualization, data preprocessing, neural net, support vector machine, etc.
+
+##### Andrew
+I set up the group logistics, including meetings, group discord, and setting up the GitHub. I helped with the development of parts of the models, primarily the Logistic Regression model. For the writeup, I helped discuss what was needed for each section as well as how to go about filling in each section, specifically how to go about evaluating each model. Alongside setting up the meetings, I also attended each one providing ideas on what to add or change to our existing notebook at each task.
