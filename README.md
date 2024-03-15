@@ -307,7 +307,7 @@ During my involvement in the project, I made significant contributions to both t
 Developed parts of the data preprocessing tasks, such as the displaying of the correlation heatmap and selection of features.
 Implemented parts of the machine learning models, including logistic regression, deep neural networks, and support vector machines. My contribution is heavily in the DNN however.
 
-Authored sections of the write-up covering a part of the introduction, milestone 3 conclusion, some parts in the result, discussion and conclusion.
+Authored sections of the write-up covering a part of the introduction, milestone 3 conclusion, discussion, and most of the conclusion as well as provided the testing metrics report in the result section.
 
 I attended our meetings as well to discuss our next goals or milestones. Concurrently, I've provided some critical analysis and interpretation of our model performance metrics, relayed my thoughts to some of the strengths, and weaknesses or our models, and wrote what opportunities for improvement we can endeavor.
 
